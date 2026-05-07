@@ -1,0 +1,1 @@
+shutdown /s /t 20 /c "Desligando o pc"
