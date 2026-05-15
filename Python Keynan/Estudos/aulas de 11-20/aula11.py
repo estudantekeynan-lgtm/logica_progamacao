@@ -1,52 +1,34 @@
-numero_de_vagas = 500
-import time
-while True:
-    print("Bem-vindo ao Shopping")
-    time.sleep(1)
-
-    forma_acesso = int(input("Qual a sua forma de acesso? \n 1-ticket \n 2-tag"))
-    if forma_acesso == 1:
-        print("Você está entrado com uma vaga comum")
-        time.sleep(1)
-        input("Pressione o botão")
-        time.sleep(1)
-        print("Verificando se há vagas comuns disponiveis...")
-        time.sleep(1)
-        print(f"Temos o total de {numero_de_vagas} disponiveis")
-        if numero_de_vagas > 0:
-            horario_entrada = float(input("Você está entrando no horário:"))
-            print("Seja bem-vindo, aproveite seu passeio!!")
-            time.sleep(1)
-        numero_de_vagas -= 1
-        forma_saida = ("você deseja sair do shopping? \n 1-sim \n 2-não")
-        if forma_saida == 1:
-             print("Você está saindo")
-        horario_saida = float(input("Qual horário você está saindo?:"))
-        saida = horario_saida -  horario_entrada
-        time.sleep(1)
-        print("Você está saindo no horário:", horario_saida)
-        time.sleep(1)
-        if saida <= 0.25:
-                print("Saida grátis!!")
-        elif saida >= 3:
-                print("O seu estacionamento ficou o total de 15R$")
-
-        else:
-            print("Entrada bloqueada. Permitido só entrada via tag.")
-
-    if forma_acesso == 2:
-   
-        id_tag = float(input("Qual é o id da sua tag?"))
-        horario_entrada2 = float(input("Você está entrando no horario?"))
-        print("Seja bem-vindo ao shopping!")
-        time.sleep(3)
-        print("Registrando o ID da sua tag e seu horário de entrada...")
-        time.sleep(3)
-        print(f"Seu id é {id_tag} você está entrando no horário {horario_entrada2}")
-    
-        numero_de_vagas -=1
-        print (numero_de_vagas)
+#explicação de def: A palavra-chave "def" é usada para definir uma função em python. Uma função é um bloco de codigo reutilizavel que realizavel que realiza uma tarefa especifica. 
+# return: A palavra-chave "return"  é usada para finalizar a execução de uma função e retornar um valor para o local onde a função foi chamada.
+#o valor retornado pode ser usado posteriormente no código.
 
 
+def nome_da_funcao(parametro1, parametro2):
+    #Corpo da função (código que será executado)
+    resultado = parametro1 + parametro2
+    return resultado
+def saudacao(nome):
+    return f"Olá, {nome}!"
+def nome():
+    nome = input("Qual é o seu nome: ")
+    return nome
+print(f"Olá, {nome()}!")
 
-        15*0.1
+def valores():
+    print("digite 3 valores: ")
+    a = int(input("Digite o primeiro valor "))
+    b = int(input("Digite o segundo valor "))
+    c = int(input("Digite o terceiro valor "))
+    return a,b,c
+print(f"O maior valor é: {max(valores())}")
+nome()
+valores()
+## Conceitos Chave
+# def: Indica o início da definição da função.
+# Nome: Identifica a função para você chamá-la depois.
+# Parâmetros: Dados que a função recebe (opcional).
+# return: Envia o resultado de volta para quem chamou a função (opcional).
+def calcular_dobro(numero):
+    return numero * 2
+print(calcular_dobro)
+print(calcular_dobro(int(input("Digite o numero que você quer calcular o dobro "))))
