@@ -36,17 +36,15 @@ while True:
             for i in range (subir()):
                 passando +=1
                 time.sleep(0.5)
-                print(f"subindo ↑↑↑ andar atual: {passando}")
-                
-                
-                
+                print(f"subindo ↑↑↑ andar atual: {passando}")            
+                         
             
                 time.sleep(1)
         elif andar_atual >andar_desejado:
             def descer (locomocao_baixo = andar_atual - andar_desejado):
                 return locomocao_baixo
-        passando = andar_atual
-        for i in range(descer()):
+            passando = andar_atual
+            for i in range(descer()):
                 passando -=1
                 time.sleep(0.5)
                 print(f" descendo ↓↓↓  andar atual: {passando}")
