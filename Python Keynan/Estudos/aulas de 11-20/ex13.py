@@ -5,12 +5,12 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 
 def cadastro():
-    idade = ent_idade.get()
+    idade = int( ent_idade.get())
     nome = ent_nome.get()
   
     if nome and idade =="":
         messagebox.showwarning("Tela de erro","Insira todos os dados")
-    else: messagebox.showinfo(f"Olá {idade} você tem {2026-idade} anos de idade")
+    else: messagebox.showinfo("Sucesso",f"Ola {nome} você tem {2026-idade}anos de idade")
 
 janela=tk.Tk()
 janela.title("EX 1")
